@@ -17,6 +17,7 @@ RUN useradd -u 5001 -G users -m user && \
     chmod +x /opt/removekeys.sh && \
     /usr/bin/ssh-keygen -A -v && \
     sed -i '/^session.*pam_loginuid.so/s/^session/# session/' /etc/pam.d/sshd && \
+    sed -i 's/Defaults.*requiretty/#Defaults requiretty/g' /etc/sudoers && \
     rm /usr/lib/tmpfiles.d/systemd-nologin.conf
 
 # passwordless sudo
