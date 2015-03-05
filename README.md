@@ -1,7 +1,7 @@
-docker-sshd
-===========
+SSHD on SystemD
+===============
 
-CentOS 7 + SSHD
+CentOS 7 + SSHD (systemd activation)
 
 The whole thing with Docker is that you are NOT
 supposed to install SSHD or anything else except
@@ -20,4 +20,6 @@ It also has a "removekeys.sh" script that is supposed
 to regen the sshd keys if you ever call it. Feel free
 to call it on derived Dockerfiles.
 
-# docker-systemd-sshd
+SSHD is started by "/usr/sbin/init" (systemd).
+
+
